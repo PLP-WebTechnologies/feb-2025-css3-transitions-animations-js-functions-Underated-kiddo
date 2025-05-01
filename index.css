@@ -1,0 +1,91 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, purple, blue);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: azure;
+}
+
+#spinner{
+    padding: 20%;
+    height : 100px ;
+    width : 100px ;
+    margin: 20px auto;
+    border : 10px solid peru;
+    border-top:10px  coral ;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    animation: spin 2s linear infinite , grow-shrink 3s ease-in-out infinite ;
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes grow-shrink{
+    0%,100% {transform: scale(1);}
+    50%{transform:scale(1.5);}
+}
+
+.fade-in-out {
+    animation: fade-in-out 2s infinite;
+}
+
+.popup {
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+.popup.show {
+    display: block;
+}
+
+button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: greenyellow;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: greenyellow;
+    transform: scale(0.95);
+}
